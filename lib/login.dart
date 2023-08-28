@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:our_first_prgrm/profile.dart';
 import 'package:our_first_prgrm/reg.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -69,6 +70,12 @@ class LoginScreen extends StatelessWidget {
                           if (_formKey.currentState!.validate()) {
                             print("username = " + usernamcontroller.text);
                             print("password = " + passwordcontroller.text);
+
+                            Navigator.push(context, MaterialPageRoute(
+                              builder: (context) {
+                                return Profile();
+                              },
+                            ));
                           }
                         },
                         child: Text("Login"))),
